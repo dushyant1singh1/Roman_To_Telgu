@@ -20,7 +20,7 @@ python3 name_of_the_script.py
 "-el","--encoder_layers",default=1,type=int
 "-dl","--decoder_layers",default =1, type =int
 "-emd","--embeded_dim",type = int, default=64
-"-cell","--cell_type",default='rnn' , choices = ["rnn","gru","lstm"]
+"-cell","--cell_type",default='rnn' , choices = ["rnn","gru","lstm"] , thses are for architecutre whether to choose from rnn, gru and lstm
 "-bi","--bidirectional",default=False,type=bool
 "-drop","--dropout",default=0,type=float
 "-hn","--hidden_neurons",type =int, default=64
@@ -30,3 +30,11 @@ python3 name_of_the_script.py
 "--learning_rate","-lr", default=0.0001, type=float
  
 ```
+
+- This project have two scripts
+  - one for seq2seq model without attention
+  - second for with attention
+
+- predicted_values.csv files contain all the predicted values with the best model using attention layers
+- With attention model is giving 49% on validation dataset and on test dataset it is giving 46%
+- Without attention model performs worse but still gives accuracy of 36%
